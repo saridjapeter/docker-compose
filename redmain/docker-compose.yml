@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+
+  redmine:
+    image: sameersbn/redmine:3.4.13-1
+    restart: always
+    ports:
+      - 88:80
+    environment:
+      DB_ADAPTER: mysql2
+      DB_HOST: 192.168.2.12
+      DB_NAME: redmine
+      DB_USER: redmine
+      DB_PASS: xf5q5FqSYEKehZqMbRn7
+      REDMINE_SECRET_TOKEN: xf5q5FqSYEKehZqMbRn7
+    volumes:
+      - /home/saidek/webapps/www/redmine.kadis.org/public_html:/home/redmine/data
